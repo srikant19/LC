@@ -1,3 +1,12 @@
+/**Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+
+Example 1:
+
+Input:nums = [1,1,1], k = 2
+Output: 2
+**/
+
+
 //traverse the pointer to end and at each step store the sum(prefix sum) in a map
 //and add the value of (value at h[sum - k]) , if sum-k exist in the map then it then definitely the subarray values after sum
 //will be will be k, so the result will be incremented
