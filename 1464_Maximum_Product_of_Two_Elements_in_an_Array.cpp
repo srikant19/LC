@@ -38,3 +38,27 @@ public:
         
     }
 };
+
+
+//using 2 variables to keep track of first and second highest
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        
+        int first = INT_MIN;
+        int second = INT_MIN;
+        for(int i = 0; i < nums.size(); i++){
+            nums[i] -= 1;
+            
+            if(nums[i] > second)
+                second = nums[i];
+            
+            if(nums[i] >= first){
+                second = first;
+                first = nums[i];
+            }
+        }
+          
+        return first * second; 
+    }
+};
